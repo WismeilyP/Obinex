@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@600&display=swap" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
+
+</head>
+<body>
+    
+  <!----------********* NAVBAR *********---------->
+  <nav>
+    
+    <div class="nav">
+
+        <div class="div-btn-lang">
+            <input type="checkbox" id="check">
+            <a href="/"><img class="logo" src="./img/logo2.png" alt=""></a>
+            <ul class="navlinks">
+                <li><a class="active" href="/about-us">About Us</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">AI</a></li>
+                <li><a href="#">Team</a></li>
+                <li><a href="#">Tokenomics</a></li>
+                <li><a href="#">Roadmap</a></li>
+                <li><a href="/faq">FAQ</a></li>
+                <button class="btn-nav-nft mobile">BUY NFTs</button>
+            </ul>
+        </div>
+
+        <div class="div-btn-lang desktop  flex">
+            <button class="btn-nav-nft">BUY NFTs</button>
+            <a href="#" class="flex-center"><img class="lang-icon" src="./img/spain.png" alt=""></a>
+        </div>
+
+        <div class="div-btn-lang mobile">
+            <img class="lang-icon mg-right" src="./img/spain.png" alt="">
+            <label for="check" class="checkbtn">
+               <img src="./img/bars-solid.svg" alt="">
+            </label>
+        </div>
+
+    </div>
+
+  </nav>
+
+
+
+  <!----------********* AI *********---------->
+  <div class="section-ai">
+
+    <div class="about-header header-ai">
+        <p class="text-nft">AI</p>
+        <h2 class="h2-services h2">
+            Designed By Us For You
+        </h2>
+        <p class="text-p">
+            The First Next-Generation AI-Powered <br>
+            CEX & Blockchain Ecosystem.
+        </p>
+    </div>
+
+    <div class="section-cards ai flex">
+        <div class="card-ai">
+            <h2 class="title-card">
+                Fraud Detection Improvement
+            </h2>
+            <p class="text-card">
+                AI can be used to analyze suspicious patterns and behaviors in transactions, helping to detect and prevent fraudulent activities more effectively. This increases the security and trust of users on the platform.
+            </p>
+        </div>
+        <img class="img-100 border-right" src="./img/ciberseguridad.png" alt="">
+    </div>
+
+    <div class="section-cards ai flex invert">
+        <div class="card-ai">
+            <h2 class="title-card">
+                AI-Based Customer Service
+            </h2>
+            <p class="text-card">
+                Integrating an AI-powered chatbot or virtual assistant can provide instant and personalized support to users. The chatbot can answer frequently asked questions, provide guidance on platform usage, and resolve basic queries, improving the customer experience and reducing the workload of the support team.            </p>
+        </div>
+        <img class="img-100 border-left" src="./img/fondo-humano.png" alt="">
+    </div>
+
+    <div class="section-cards ai flex">
+        <div class="card-ai">
+            <h2 class="title-card">
+                Market Analysis & Prediction
+            </h2>
+            <p class="text-card">
+                Using AI algorithms to analyze large volumes of cryptocurrency market data can provide valuable insights into trends, patterns, and investment opportunities. This enables users to make more informed decisions and maximize their profits.             </p>
+        </div>
+        <img class="img-100 border-right" src="./img/estadisticas.png" alt="">
+    </div>
+
+    <div class="section-cards ai flex invert">
+        <div class="card-ai">
+            <h2 class="title-card">
+                Security Improvement            
+            </h2>
+            <p class="text-card">
+                AI can help detect and prevent cyber attacks and security breaches. By continuously analyzing traffic patterns, AI can identify anomalous behavior and take preventive measures to protect users' assets and data.        </div>
+            <img class="img-100 border-left" src="./img/desbloqueo-seguridad.png" alt="">
+    </div>
+
+    <div class="section-cards ai flex">
+        <div class="card-ai">
+            <h2 class="title-card">
+                Customized Experience
+            </h2>
+            <p class="text-card">
+                AI can analyze users behaviors and preferences to offer personalized investment recommendations and products. This allows users to access relevant and tailored content, enhancing their experience on the platform.         </div>
+            <img class="img-100 border-right" src="./img/lentes.png" alt="">
+    </div>
+
+    <div class="section-cards ai flex invert">
+        <div class="card-ai">
+            <h2 class="title-card">
+                Liquidity Optimization
+            </h2>
+            <p class="text-card">
+                AI can analyze the supply and demand of different assets on the platform, as well as market trends, to facilitate better liquidity management. This ensures that users can make fast and efficient transactions at all times.        </div>
+           <img class="img-100 border-left" src="./img/telefono-inteligente-vidrio-tecnologia-inteligencia-artificial.png" alt="">
+    </div>
+
+   
+
+  </div>
+
+
+  <!----------********* NFTs *********---------->
+  <section class="section-2 section-nfts">
+
+    <div class="nft-header">
+        <p class="text-nft">NFT Shop</p>
+        <h2 class="h2-services h2">
+            Mint your own NFTs 
+            <br> 
+            with just a click NOW
+        </h2>
+        <p class="h4-services text-p">
+            Our exclusive collection of NFTs 
+            <br>
+            is designed to give you unique and 
+            <br> 
+            highly profitable access and benefits.
+        </p>
+    </div>
+
+    <div class="container-nfts">
+        
+        <div class="mg-right card-nft " id="this">
+            <div class="front card-white" >
+
+                <button class="info-btn " onclick="flipCard()"><img src="./img/info-black.png" alt=""></button>
+                <img class="tarjeta-nft">
+                <div class="input-group flex">
+                    <div class="flex">
+                        <span class="restar" id="restar_cantidad1">-</span>
+                        <input class="cantidad" type="number" id="cantidad1" min="1" value="1">
+                        <span class="sumar" id="sumar_cantidad1">+</span>
+                    </div>
+                    <input type="text" id="precioTotal1" class="precioTotal" readonly class="result-input precio" >
+                </div>
+
+            </div>
+
+            <div class="back card-white">
+                <span class="close-btn" onclick="flipCard()"><img src="./img/close.png" alt=""></span>
+
+                <div class="data-back">
+                    <ul>
+                        <li>Fees from Royalties: 5%</li>
+                        <li>Revenues from Fees: 9%</li>   
+                        <li>Trading Fee Discount: 60%</li> 
+                        <li>Pre-Sale: 1st Round</li>   
+                    </ul>
+                </div>
+
+                <div class="card-img-back  back-img1">
+                    <img src="./img/phones.png" alt="">
+                </div>
+            </div>
+        </div>
+
+        <div class="card-nft " id="this2">
+            <div class="front card-white" >
+
+                <button class="info-btn " onclick="flipCard2()"><img src="./img/info-black.png" alt=""></button>
+                <img class="tarjeta-nft">
+                <div class="input-group flex">
+                    <div class="flex">
+                        <span class="restar" id="restar_cantidad2">-</span>
+                        <input class="cantidad" type="number" id="cantidad2" min="1" value="1">
+                        <span class="sumar" id="sumar_cantidad2">+</span>
+                    </div>
+                    <input type="text" id="precioTotal2" class="precioTotal" readonly class="result-input precio" >
+                </div>
+
+            </div>
+
+            <div class="back card-white">
+                <span class="close-btn" onclick="flipCard2()"><img src="./img/close.png" alt=""></span>
+
+                <div class="data-back">
+                    <ul>
+                        <li>Fees from Royalties: 3%</li>
+                        <li>Revenues from Fees: 4%</li>   
+                        <li>Trading Fee Discount: 50%</li> 
+                        <li>Pre-Sale: 2nd Round</li>   
+                    </ul>
+                </div>
+
+                <div class="card-img-back  back-img2">
+                    <img src="./img/cardBack2.png" alt="">
+                </div>
+            </div>
+        </div>
+
+        <div class="mg-right mg-top card-nft " id="this3">
+            <div class="front card-white" >
+
+                <button class="info-btn " onclick="flipCard3()"><img src="./img/info-black.png" alt=""></button>
+                <img class="tarjeta-nft">
+                <div class="input-group flex">
+                    <div class="flex">
+                        <span class="restar" id="restar_cantidad3">-</span>
+                        <input class="cantidad" type="number" id="cantidad3" min="1" value="1">
+                        <span class="sumar" id="sumar_cantidad3">+</span>
+                    </div>
+                    <input type="text" id="precioTotal3" class="precioTotal" readonly class="result-input precio" >
+                </div>
+
+            </div>
+
+            <div class="back card-white">
+                <span class="close-btn" onclick="flipCard3()"><img src="./img/close.png" alt=""></span>
+
+                <div class="data-back">
+                    <ul>
+                        <li>Fees from Royalties: 2%</li>
+                        <li>Revenues from Fees: 2%</li>   
+                        <li>Trading Fee Discount: 40%</li> 
+                        <li>Pre-Sale: 3rd Round</li>   
+                    </ul>
+                </div>
+
+                <div class="card-img-back  back-img3">
+                    <img src="./img/cardBack3.png" alt="">
+                </div>
+            </div>
+        </div>
+
+        <div class="mg-top card-nft ">
+            <div class="front card-orange last-of-info" >
+
+                <h3 class="title-card">Total Supply of all rounds:</h3>
+                <p class="text-card">
+
+                    <br>
+                    GOLD NFTs = 2.250
+                    <br>
+                    SILVER NFTs = 3.500
+                    <br>
+                    BRONZE NFTs = 6.000
+                    <br><br>
+                    
+                    On the 1st of each month, the prices of our NFT collection will automatically increase by 30% more than their value.</p>
+            </div>
+        </div>
+
+        <button class="hover-button btn-purchase" >
+            <span class="button-text">Purchase now</span>
+            <span class="hover-effect"></span>
+        </button>
+    </div>
+
+  </section>
+
+
+  <!----------********* FOOTER *********---------->
+  <footer>
+    <div class="container-footer">
+        <div class="column">
+        <h3 class="h3-footer">Company</h3>
+        <ul>
+            <li>About Us</li>
+            <li>Our Services</li>
+            <li>Blog</li>
+            <li>Careers</li>
+            <li>Ambassadors Program</li>
+            <li>Contact the Team</li>
+            <li>Request a Feature</li>
+        </ul>
+        </div>
+        <div class="column">
+        <h3 class="h3-footer">Products</h3>
+        <ul>
+            <li>Exchange</li>
+            <li>NFT Shop</li>
+            <li>Launchpad</li>
+            <li>Artificial Inteligence</li>
+        </ul>
+        </div>
+        <div class="column">
+        <h3 class="h3-footer">Legal</h3>
+        <ul>
+            <li>Privacy Policy</li>
+            <li>Terms of Use</li>
+            <li>Cookies Policy</li>
+            <li>Disclaimer</li>
+        </ul>
+        </div>
+        <div class="column2">
+        <h3 class="h3-footer">Follow Us</h3>
+        <ul class="social-icons">
+            <li><a href="#"><img src="./img/Link_LinkedIn.png" alt=""></a></li>
+            <li><a href="#"><img src="./img/Link_Telegram.png" alt=""></a></li>
+            <li><a href="#"><img src="./img/Link_Twitter.png" alt=""></a></li>
+            <li><a href="#"><img src="./img/Link_Instagram.png" alt=""></a></li>
+            <li><a href="#"><img src="./img/medium-logo.png" alt=""></a></li>
+            <li><a href="#"><img src="./img/Link_YouTube.png" alt=""></a></li>
+        </ul>
+        </div>
+    </div>
+  </footer>
+ 
+
+  <script src="js.js"></script>
+
+</body>
+</html>
