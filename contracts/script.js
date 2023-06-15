@@ -5,6 +5,7 @@ var app = new Vue({
     contractTokenPay: "0x2803c135AD2B4f235c7Cbcaab79F55E2B0885d4f",
     contractOF: '0xb4D0bC8A75135b70094a79a28ed312C1C00A333A',
     contractSale: "0x0B1993dc26aA02E9818d7b87B4c9003145fb635e",
+    etherumInstall: false,
     loading: true,
     message_error: "",
     message_success: "",
@@ -37,15 +38,18 @@ var app = new Vue({
   mounted: async function () {
     const $this = this;
 
-    window.ethereum.on('networkChanged', async function (chainId) {
-      await $this.networkChanged(chainId)
-    })
+    if(window.ethereum != undefined){
+      this.etherumInstall = true;
+      window.ethereum.on('networkChanged', async function (chainId) {
+        await $this.networkChanged(chainId)
+      })
 
-    window.ethereum.on('accountsChanged', async function () {
-      await $this.accountsChanged()
-    })
+      window.ethereum.on('accountsChanged', async function () {
+        await $this.accountsChanged()
+      })
+    }
 
-    await this.check();
+    this.check();
   },
   updated: function () {
 
@@ -61,35 +65,47 @@ var app = new Vue({
     },
     async check() {
       this.loading = true;
-      try {
-        const [isConnect, address] = await this.isConnect()
-        this.is_connect = isConnect;
-        this.address = address;
+      try{
+        if(this.etherumInstall){
+          const [isConnect, address] = await this.isConnect()
+          this.is_connect = isConnect;
+          this.address = address;
 
-        const web3 = new Web3(window.ethereum);
-        this.chainId = this.is_connect ? await web3.eth.getChainId() : 0
-        const [permit, node, index] = this.networkPermit(this.chainId);
-        this.indexChainId = index;
-        this.statusPermit = permit;
-        this.nodeRPC = node;
-        this.balanceEther = await this.getETHBalance(address)
-        this.balanceUSDT = await this.balanceOfTokenId(address, this.contractTokenPay)
-        const allowance = await this.onAllowance()
-        this.allowance = allowance != 0
+          if(isConnect){
+            const web3 = new Web3(window.ethereum);
+            this.chainId = this.is_connect ? await web3.eth.getChainId() : 0
+            const [permit, node, index] = this.networkPermit(this.chainId);
+            this.indexChainId = index;
+            this.statusPermit = permit;
+            this.nodeRPC = node;
+            this.balanceEther = await this.getETHBalance(address)
+            this.balanceUSDT = await this.balanceOfTokenId(address, this.contractTokenPay)
+            const allowance = await this.onAllowance()
+            this.allowance = allowance != 0
+          }
+        }
+
         this.loading = false;
-      } catch (e) {
+      }
+      catch (e) {
         this.loading = false;
       }
     },
     async isConnect() {
-      const isC = await window.ethereum.request({method: 'eth_accounts'})
-      return [isC.length > 0, isC[0]]
+      try{
+        const isC = await window.ethereum.request({method: 'eth_accounts'})
+        return [isC.length > 0, isC[0]]
+      }
+      finally{
+        this.loading = false;
+      }
     },
     async connect() {
       try {
         await window.ethereum.enable();
         await this.check();
-      } catch {
+      }
+      catch {
       }
     },
     async networkChanged(chainId) {
@@ -119,7 +135,8 @@ var app = new Vue({
           params: [{chainId: hex}] // Cambiar al ID de red de Ropsten
         })
         await this.check();
-      } catch {
+      }
+      catch {
 
       }
     },
@@ -138,17 +155,21 @@ var app = new Vue({
             if (e.message.includes('execution reverted')) {
               try {
                 message = e.message.split('"execution reverted:')[1].split('"')[0];
-              } catch (r) {
+              }
+              catch (r) {
                 try {
                   message = e.message.split('"message": "')[1].split('"')[0];
-                } catch (e) {
+                }
+                catch (e) {
                   message = "Undetermined error."
                 }
               }
               throw new Error(message);
-            } else
+            }
+            else
               throw new Error(message);
-          } else {
+          }
+          else {
             throw new Error(message);
           }
 
@@ -183,13 +204,16 @@ var app = new Vue({
         const method = await this.executeMethod(contract.methods.approve(this.contractSale, value), {from: this.address})
         const tx = await method.send({from: this.address})
         this.check()
-      } catch (e) {
+      }
+      catch (e) {
         if ('message'.includes(e)) {
           this.message_error = e;
-        } else {
+        }
+        else {
           this.message_error = e.message
         }
-      } finally {
+      }
+      finally {
         this.loading = false;
       }
     },
@@ -199,7 +223,8 @@ var app = new Vue({
       const allowance = await this.onAllowance()
       if (allowance == 0) {
         this.onApprove(this.spender, this.MAX_INT)
-      } else {
+      }
+      else {
         const ids = [];
         const amounts = [];
         if (this.nft1 != 0) {
@@ -222,13 +247,16 @@ var app = new Vue({
           const method = await this.executeMethod(contract.methods.publicSale(ids, amounts), {from: this.address})
           const tx = await method.send({from: this.address})
           this.showSuccessMessage("The purchase has been successfully completed")
-        } catch (e) {
+        }
+        catch (e) {
           if ('message'.includes(e)) {
             this.message_error = e;
-          } else {
+          }
+          else {
             this.message_error = e.message
           }
-        } finally {
+        }
+        finally {
           this.loading = false;
         }
       }

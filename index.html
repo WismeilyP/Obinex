@@ -354,7 +354,12 @@
                             <div class="ld ld-ball ld-flip-h" style="font-size:45px;color:black"></div>
                         </div>
 
-                        <button class="hover-button btn-purchase" v-if="!loading && !is_connect && statusPermit"
+                        <button v-if="!etherumInstall" class="hover-disabled btn-purchase">
+                            <div class="button-text">Install Metamask</div>
+                            <span class="hover-effect"></span>
+                        </button>
+
+                        <button class="hover-button btn-purchase" v-if="!loading && !is_connect && statusPermit && etherumInstall"
                                 v-on:click='connect'>
                             <div class="button-text">Connect</div>
                             <span class="hover-effect"></span>
@@ -369,7 +374,7 @@
                             <span class="hover-effect"></span>
                         </button>
 
-                        <button class="hover-button btn-purchase" v-if="!loading && !statusPermit" v-on:click='changeNetwork'>
+                        <button class="hover-button btn-purchase" v-if="!loading && is_connect && !statusPermit" v-on:click='changeNetwork'>
                             <div class="button-text">Change network</div>
                             <span class="hover-effect"></span>
                         </button>

@@ -1704,3 +1704,19 @@ ul
 }
 
 
+.hover-disabled {
+  position: relative;
+  overflow: hidden;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  width: 184px;
+  height: 45px;
+  background: #73787c;
+  border-radius: 30px;
+  color: white;
+  border: none;
+  margin-top: 29px;
+  transition: all 0.3s;
+  font-weight: 600;
+}
