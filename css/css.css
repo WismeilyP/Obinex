@@ -1412,6 +1412,7 @@ ul
   .hero
   {
     height: 100vh;
+    padding-top: 70px;
   }
 
   .hero-content
@@ -1447,7 +1448,7 @@ ul
     transition: opacity 0.6s, transform 0.6s;
     z-index: 0;
     background-repeat: no-repeat;
-    margin-top: 70px;
+    margin-top: 60px;
     box-sizing: border-box;
   }
 

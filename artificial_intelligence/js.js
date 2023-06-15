@@ -1,17 +1,3 @@
-/*********--- Monedas del hero ---**********/
-window.addEventListener('scroll', function() 
-{
-  var hero = document.querySelector('.hero');
-  var scrollPosition = window.pageYOffset;
-
-  if (scrollPosition > 200) {
-    hero.classList.add('is-scrolled');
-  } else {
-    hero.classList.remove('is-scrolled');
-  }
-});
-
-
 /*********--- Cards NFTs---**********/
 function flipCard() 
 {
@@ -31,6 +17,7 @@ function flipCard3()
 
 /*********--- Inputs NFTs---**********/
 document.addEventListener("DOMContentLoaded", function() {
+  
   function calcularPrecioTotal(input, resultado, precio) {
       resultado.value = input.value * precio;
   }
@@ -56,38 +43,26 @@ document.addEventListener("DOMContentLoaded", function() {
 
 });
 
+const questions = document.querySelectorAll('.question');
 
-/*********--- Carrusel ---**********/
-var carousel = document.querySelector(".carousel");
-var cardsWrapper = document.querySelector(".cards");
-var prevBtn = document.querySelector(".prev");
-var nextBtn = document.querySelector(".next");
-var currentIndex = 0;
+questions.forEach(question => {
+  const answer = question.querySelector('.answer');
+  const title = question.querySelector('.question-title');
+  const symbol = question.querySelector('.toggle-symbol');
 
-prevBtn.addEventListener("click", function () {
-  navigateCarousel("prev");
+  title.addEventListener('click', () => {
+    const isOpen = question.classList.toggle('open');
+
+    if (isOpen) {
+      answer.style.maxHeight = answer.scrollHeight + 'px';
+      symbol.textContent = '-';
+    } else {
+      answer.style.maxHeight = 0;
+      symbol.textContent = '+';
+    }
+  });
 });
 
-nextBtn.addEventListener("click", function () {
-  navigateCarousel("next");
-});
 
-function navigateCarousel(direction) {
-  if (direction === "prev" && currentIndex > 0) {
-    currentIndex--;
-  } else if (direction === "next" && currentIndex < cardsWrapper.children.length - 1) {
-    currentIndex++;
-  }
 
-  var cardWidth = carousel.offsetWidth;
-  var offset = -currentIndex * cardWidth;
-  cardsWrapper.style.transform = "translateX(" + offset + "px)";
-
-  updateArrowVisibility();
-}
-
-function updateArrowVisibility() {
-  prevBtn.style.display = currentIndex > 0 ? "block" : "none";
-  nextBtn.style.display = currentIndex < cardsWrapper.children.length - 1 ? "block" : "none";
-}
-
+  

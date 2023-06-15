@@ -19,6 +19,11 @@ body
   padding: 183px 2em;
 }
 
+.text-end 
+{
+  text-align: end;
+}
+
 
 /*********-------------------- NAVBAR -----------------**********/
 nav 
@@ -140,33 +145,49 @@ button.btn-nav-nft
   display: none;
 }
 
-/*********-------------------- ABOUT US -----------------**********/
-.about-header 
+/*********-------------------- AI -----------------**********/
+.header-ai 
 {
+  padding-top: 253px;
+  text-align: center;
+  padding-bottom: 77px;
+}
+.section-cards 
+{
+  background: white;
+  border-radius: 30px;
+  margin-top: 20px;
+}
+
+.section-ai 
+{
+  padding: 0em 2em;  
+  margin: auto;
+}
+
+.card-ai 
+{
+  padding: 85px 32px;
   text-align: center;
 }
-.card 
+
+.img-100
 {
-  border-radius: 30px;
+  width: 100%;
+  height: 100%;
 }
-.card.yellow 
+
+.invert 
 {
-  background: #FDD817;
+  flex-direction: row-reverse !important;
 }
-.card.purple
-{
-  background: #865AE2;
-  color: white;
-}
-.card.white
-{
-  background: #ffffff;
-}
+
 
 /*********-------------------- NFTS -----------------**********/
 .section-nfts 
 {
   text-align: center;
+  padding: 183px 2em 0em 2em;
 }
 
 .h2 
@@ -208,7 +229,7 @@ p.text-p
 
 .nft-header
 {
-  padding: 5em 0em 2em 0em;
+  padding: 0em 0em 2em 0em;
 }
 
 .btn-purchase 
@@ -420,10 +441,9 @@ span.close-btn
 {
   font-family: 'Inter';
   font-style: normal;
-  font-weight: 600;
+  font-weight: 700;
   font-size: 28px;
   line-height: 28px;
-  color: #191C1F;
 }
 
 .text-card 
@@ -434,6 +454,7 @@ span.close-btn
   font-size: 17px;
   line-height: 28px;
   text-align: justify;
+  margin: 1em 0em;
 }
 
 .hover-button 
@@ -548,6 +569,16 @@ ul
   width: 100%;
 }
 
+.border-right 
+{
+  border-radius: 0px 0px 30px 30px;
+}
+.border-left 
+{
+  border-radius: 0px 0px 30px 30px;
+}
+
+
 .desktop 
 {
   display: none;
@@ -571,7 +602,39 @@ ul
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-wrap: wrap;
+    flex-direction: row;
+  }
+
+  .flex-cards 
+  {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .left 
+  {
+    width: 49%;
+    margin-right: 10px !important;
+    margin-top: 20px !important;
+  }
+
+  .right 
+  {
+    width: 49%;
+    margin-left: 10px;
+    margin-top: 20px;
+  }
+
+  .middle
+  {
+    margin: 0px 0px;
+  }
+
+  .mitad 
+  {
+    width: 50%;
+    margin: auto;
   }
 
 
@@ -608,7 +671,7 @@ ul
     justify-content: flex-start;  
     width: auto;
   }
- 
+
   .checkbtn
   {
     display: none;
@@ -619,8 +682,14 @@ ul
     margin-right: 20px;
   }
 
- 
+
+
   /*********--- NFTs ---**********/
+  .section-nfts
+  {
+    padding: 183px 0em 0em 0em !important;
+  }
+
   .nft-header
   {
     padding: 0em;
@@ -669,6 +738,20 @@ ul
   {
     font-size: 20px;
   }
+
+  .border-right 
+  {
+    border-radius: 0px 30px 30px 0px;
+  }
+  .border-left 
+  {
+    border-radius: 30px 0px 0px 30px;
+  }
+
+  .section-cards
+  {
+    height: 428px;
+  }
   
 }
 
@@ -694,8 +777,36 @@ ul
   {
     width: 777px;
     margin: auto;
-    padding: 253px 0em !important;
+    padding: 253px 0em 0px 0em !important;
   }
+  .section-2 
+  {
+    width: 777px;
+    margin: auto;
+    padding-top: 183px;
+  }
+
+  .text-center 
+  {
+    text-align: center;
+  }
+
+  .card 
+  {
+    border-radius: 30px;
+    padding: 65px 40px;
+    text-align: center;
+    height: 428px;
+  }
+
+
+  /*********-------------------- AI -----------------**********/
+  .section-ai 
+  {
+    width: 777px;
+    margin: auto;
+  }
+ 
 
   /*********--- NFTs ---**********/
   .card-nft 
@@ -706,6 +817,8 @@ ul
   {
     padding: 0em !important;
   }
+
+
 
   /*********--- FOOTER ---**********/
   footer 

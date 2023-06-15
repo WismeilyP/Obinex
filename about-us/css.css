@@ -13,6 +13,16 @@ body
   background: #f3f4f7;
 }
 
+.section
+{
+  margin: auto;
+  padding: 183px 2em;
+}
+
+.text-end 
+{
+  text-align: end;
+}
 
 
 /*********-------------------- NAVBAR -----------------**********/
@@ -59,7 +69,6 @@ button.btn-nav-nft
   color: white;
   border: none;
   font-weight: 600;
-  font-family: Montserrat;
   cursor: pointer;
 }
 
@@ -136,29 +145,270 @@ button.btn-nav-nft
   display: none;
 }
 
-
-/*********-------------------- FAQ -----------------**********/
-.section 
+/*********-------------------- ABOUT US -----------------**********/
+.container-cards 
 {
-  padding-top: 163px;
+  margin-top: 77px;
 }
 
-.section-faq 
-{
-  padding-top: 253px;
-}
-
-.faq-header 
+.about-header 
 {
   text-align: center;
-  padding: 0em 1em;
 }
 
-.faq 
+.middle
 {
-  padding: 2em;
+  margin: 20px 0px;
+}
+
+.card 
+{
+  border-radius: 30px;
+  padding: 65px 40px;
+  text-align: center;
+  overflow: hidden;
+}
+.card.middle 
+{
+  padding: 65px 0px;
+}
+.header-card-middle
+{
+  padding: 0px 40px;
+}
+
+.card.yellow 
+{
+  background: #FDD817;
+}
+
+button.btn-about 
+{
+  border: 1px solid #000000;
+  border-radius: 20px;
+  background: no-repeat;
+  font-size: 20px;
+  width: 177px;
+  height: 33px;
+  font-weight: 700;
+  transition: all 0.2s;
+  cursor: pointer;
+}
+button.btn-team 
+{
+  height: 45px;
+  width: 208.4px;
+  border-radius: 30px;
+}
+button.btn-about:hover 
+{
+  background: black;
+  color: white;
+  transition: all 0.2s;
+}
+
+.btn-blue
+{
+  background: #0B6EF9;
+  border: 1px solid #0B6EF9;
+  border-radius: 20px;
+  color: white;
+  transition: all 0.2s;
+  font-size: 20px;
+  font-weight: 700;
+  cursor: pointer;
+  position: relative;
+  z-index: 99;
+  width: 177px;
+  height: 33px;
+}
+.btn-blue:hover 
+{
+  background: none;
+  border: 1px solid #ffffff;
+  color: rgb(255, 255, 255);
+}
+
+.secured
+{
+  width: 100%;
+}
+.lower 
+{
+  width: 100%;
+}
+.support 
+{
+  width: 60%;
+  margin-top: 2em;
+}
+
+.card.purple
+{
+  background: #865AE2;
+  color: white;
+}
+.card.white
+{
+  background: #ffffff;
+}
+
+
+/*********-------------------- TEAM -----------------**********/
+.directores
+{
   margin: auto;
   margin-top: 77px;
+}
+.card-team 
+{
+  width: 238.92px;
+  height: 278px;
+  perspective: 1000px; 
+  margin: auto;
+  margin-bottom: 20px;
+}
+
+.card-front, .card-back 
+{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden; 
+  transition: transform 0.6s;
+}
+
+.card-front 
+{
+  transform: rotateY(0deg); 
+}
+
+.card-back
+{
+  background: rgb(0, 0, 0);
+  transform: rotateY(180deg); 
+  color: white;
+  border-radius: 20px;
+  padding: 1em;
+}
+.card-back h2 
+{
+  font-size: 18px;
+  font-weight: 600;
+}
+.card-back h3
+{
+  font-weight: 600;
+  font-size: 19px;
+}
+.social-link
+{
+  width: 30px;
+}
+
+.card-team:hover .card-front 
+{
+  transform: rotateY(-180deg); 
+}
+
+.card-team:hover .card-back 
+{
+  transform: rotateY(0deg); 
+}
+
+.card-teams
+{
+  width: 145px;
+  height: 170px;
+  overflow: hidden;
+  border-radius: 20px;
+  margin: auto;
+  margin-bottom: 20px;
+}
+
+.image 
+{
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.image img 
+{
+  width: 100%;
+  height: 100%;
+  transition: transform 0.3s, filter 0.3s;
+}
+
+.overlay 
+{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(0 0 0 / 5%);
+  opacity: 0;
+  transition: opacity 0.3s;
+  display: flex;
+  justify-content: space-between;
+  color: #fff;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  cursor: pointer;
+  flex-direction: column;
+  align-items: flex-end;
+  padding: .3em;
+}
+.members-team
+{
+  margin-top: 60px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.overlay:hover 
+{
+  opacity: 1;
+}
+
+.image:hover .img-team
+{
+  transform: scale(1.1);
+  filter: brightness(50%);
+}
+.social-link-2
+{
+  width: 30px !important;
+  height: 30px  !important;
+}
+.text-teams
+{
+  text-align: start;
+  width: 100%;
+}
+.text-teams h3
+{
+  font-size: 15px;
+  margin-bottom: 0px;
+}
+.text-teams p
+{
+  font-size: 15px;
+}
+.container-team
+{
+  margin-bottom: 183px;
+  text-align: center;
+}
+
+
+/*********-------------------- NFTS -----------------**********/
+.section-nfts 
+{
+  text-align: center;
+  padding: 0em 2em;
 }
 
 .h2 
@@ -172,7 +422,7 @@ button.btn-nav-nft
   margin: 29px 0px;
 }
 
-.text-faq
+.text-nft
 {
   font-style: normal;
   font-weight: 700;
@@ -191,63 +441,6 @@ p.text-p
   font-size: 16px;
 }
 
-.question 
-{
-  margin-bottom: 20px;
-  background: #FFFFFF;
-  border-radius: 10px;
-  padding: 1em 1.5em;
-}
-
-.question-title 
-{
-  cursor: pointer;
-  margin-bottom: 0;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  font-size: 20px;
-  letter-spacing: -0.025em;
-  font-weight: 700;
-}
-
-.open .question-title 
-{
-  color: #007EFC;
-}
-
-.toggle-symbol 
-{
-  font-weight: bold;
-  font-size: 18px;
-  transition: transform 0.2s ease-out;
-}
-
-.answer 
-{
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.2s ease-out;
-  margin-top: 0;
-  margin-top: 5px;
-}
-
-.answer p 
-{
-  margin-top: 2em;
-  font-weight: 600;
-  font-size: 16px;
-  line-height: 30px;
-}
-
-
-
-/*********-------------------- NFTS -----------------**********/
-.section-nfts 
-{
-  text-align: center;
-}
-
 .input-group 
 {
   display: flex;
@@ -257,12 +450,7 @@ p.text-p
 
 .nft-header
 {
-  padding: 5em 2em 2em 2em;
-}
-
-.container-nfts
-{
-  padding: 0em 2em;
+  padding: 0em 0em 2em 0em;
 }
 
 .btn-purchase 
@@ -474,10 +662,9 @@ span.close-btn
 {
   font-family: 'Inter';
   font-style: normal;
-  font-weight: 600;
+  font-weight: 700;
   font-size: 28px;
   line-height: 28px;
-  color: #191C1F;
 }
 
 .text-card 
@@ -488,6 +675,7 @@ span.close-btn
   font-size: 17px;
   line-height: 28px;
   text-align: justify;
+  margin: 1em 0em;
 }
 
 .hover-button 
@@ -602,8 +790,23 @@ ul
   width: 100%;
 }
 
+.desktop 
+{
+  display: none;
+}
+
 @media (min-width: 600px) 
 {
+
+  .mobile 
+  {
+    display: none;
+  }
+
+  .desktop 
+  {
+    display: block;
+  }
 
   .flex 
   {
@@ -611,6 +814,38 @@ ul
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
+  }
+
+  .flex-cards 
+  {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .left 
+  {
+    width: 49%;
+    margin-right: 10px !important;
+    margin-top: 20px !important;
+  }
+
+  .right 
+  {
+    width: 49%;
+    margin-left: 10px;
+    margin-top: 20px;
+  }
+
+  .middle
+  {
+    margin: 0px 0px;
+  }
+
+  .mitad 
+  {
+    width: 50%;
+    margin: auto;
   }
 
 
@@ -647,7 +882,7 @@ ul
     justify-content: flex-start;  
     width: auto;
   }
- 
+
   .checkbtn
   {
     display: none;
@@ -659,10 +894,80 @@ ul
   }
 
 
-  /*********-------------------- FAQ -----------------**********/
-  .section-faq
+  /*********-------------------- ABOUT US -----------------**********/
+  .card.yellow 
   {
-    padding-top: 253px;
+    display: flex;
+  }
+  .title-card 
+  {
+    font-size: 32px;
+  }
+  .text-card 
+  {
+    font-size: 20px;
+    margin: 33px 0px 0px 0px;
+  }
+
+  .secured
+  {
+    width: 243px;
+  }
+  .lower 
+  {
+    width: 100%;
+    margin-top: -1.5em;
+  }
+  .support 
+  {
+    width: 115px;
+    margin-top: 0em;
+  }
+  .end-img 
+  {
+    text-align: end;
+  }
+  .btn-about 
+  {
+    margin-top: 33px;
+  }
+  .btn-blue
+  {
+    margin-top: 33px;
+    width: 224.12px;
+  }
+
+
+
+  /*********-------------------- TEAM -----------------**********/
+  .card-team 
+  {
+    margin-bottom: 0px;
+  }
+  .card-teams
+  {
+    margin-bottom: 0px;
+  }
+  .container-team
+  {
+    text-align: start;
+  }
+  .members-team
+  {
+    flex-wrap: nowrap;
+  }
+
+
+
+  /*********--- NFTs ---**********/
+  .section-nfts
+  {
+    padding: 0em !important;
+  }
+
+  .nft-header
+  {
+    padding: 0em;
   }
 
   .h2 
@@ -674,16 +979,6 @@ ul
   {
     font-size: 32px;
     line-height: 40px;  
-  }
-  .faq 
-  {
-    padding: 0em 4em;
-  }
-
-  /*********--- NFTs ---**********/
-  .nft-header
-  {
-    padding: 0em;
   }
 
   .container-nfts
@@ -743,12 +1038,26 @@ ul
   {
     width: 777px;
     margin: auto;
+    padding: 253px 0em 0px 0em !important;
   }
-
-  .faq 
+  .section-2 
   {
     width: 777px;
-    padding: 0px;
+    margin: auto;
+    margin-top: 183px;
+  }
+
+  .text-center 
+  {
+    text-align: center;
+  }
+
+  .card 
+  {
+    border-radius: 30px;
+    padding: 65px 40px;
+    text-align: center;
+    height: 428px;
   }
 
   /*********--- NFTs ---**********/
@@ -759,6 +1068,21 @@ ul
   .container-nfts
   {
     padding: 0em !important;
+  }
+
+  /*********-------------------- ABOUT US -----------------**********/
+  .secured
+  {
+    width: 343px;
+  }
+  .support 
+  {
+    width: 138px;
+    margin-top: 0em;
+  }
+  .header-card.mitad 
+  {
+    margin-left: 2em;
   }
 
   /*********--- FOOTER ---**********/
