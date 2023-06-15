@@ -1,4 +1,4 @@
-* 
+*
 {
   padding: 0;
   margin: 0;
@@ -8,7 +8,7 @@
   font-family: 'Inter';
 }
 
-body 
+body
 {
   background: #f3f4f7;
   overflow-x: hidden;
@@ -19,12 +19,12 @@ body
   margin-bottom: 2em;
 }
 
-.mg-top-none 
+.mg-top-none
 {
   margin-top: 0px !important;
 }
 
-.flex-center 
+.flex-center
 {
   display: flex;
   align-items: center;
@@ -35,18 +35,18 @@ body
   display: flex;
 }
 
-.h2 
+.h2
 {
   font-style: normal;
   font-weight: 700;
   font-size: 30px;
   text-align: center;
-  letter-spacing: -0.025em;  
+  letter-spacing: -0.025em;
   color: #000000;
   margin: 29px 0px;
 }
 
-h4 
+h4
 {
   font-style: normal;
   font-weight: 500;
@@ -75,7 +75,7 @@ h4
 }
 
 .input-group input[type="number"]::-webkit-inner-spin-button,
-.input-group input[type="number"]::-webkit-outer-spin-button 
+.input-group input[type="number"]::-webkit-outer-spin-button
 {
     -webkit-appearance: none;
     margin: 0;
@@ -93,24 +93,24 @@ h4
   margin-bottom: 2em;
 }
 
-.card img 
+.card img
 {
   transition: transform 0.3s ease;
 }
 
-.card img:hover 
+.card img:hover
 {
   transform: scale(1.1);
 }
 
-.left-card 
+.left-card
 {
   padding: 45px 40px;
   text-align: start;
   width: 100%;
 }
 
-.title-card 
+.title-card
 {
   font-family: 'Inter';
   font-style: normal;
@@ -136,7 +136,7 @@ h4
   text-align: end;
 }
 
-.card-white 
+.card-white
 {
   background: white;
 }
@@ -146,42 +146,42 @@ h4
   background: rgb(249 249 249);
 }
 
-.card-grey 
+.card-grey
 {
   background: #343C45;
 }
 
-.card-purple 
+.card-purple
 {
   background: #865AE2;
 }
 
-.card-blue 
+.card-blue
 {
   background: #3B7EF4;
 }
 
-.card-pink 
+.card-pink
 {
   background: #EE5B7A;
 }
 
-.card-black 
+.card-black
 {
   background: #111113;
 }
 
-.card-orange 
+.card-orange
 {
   background: #F7A037;
 }
 
-.card-yellow 
+.card-yellow
 {
   background: #F2C631;
 }
 
-.card-green 
+.card-green
 {
   background: #64D249;
 }
@@ -256,7 +256,7 @@ h4
 
 
 /*********-------------------- NAVBAR -----------------**********/
-nav 
+nav
 {
   height: 80px;
   width: 100%;
@@ -270,7 +270,7 @@ nav
   z-index: 999;
 }
 
-.nav 
+.nav
 {
   display: flex;
   justify-content: space-between;
@@ -280,13 +280,13 @@ nav
   padding: 0em 1em;
 }
 
-.logo 
+.logo
 {
   height: 42px;
   margin-right: 18px;
 }
 
-button.btn-nav-nft 
+button.btn-nav-nft
 {
   padding: 4px 8px;
   gap: 4px;
@@ -303,7 +303,7 @@ button.btn-nav-nft
   cursor: pointer;
 }
 
-.lang-icon 
+.lang-icon
 {
   width: 35px;
   margin-right: 10px;
@@ -316,13 +316,13 @@ button.btn-nav-nft
   align-items: center;
 }
 
-.navlinks li 
+.navlinks li
 {
   display: inline-block;
   margin: 0 5px;
 }
 
-.navlinks li a 
+.navlinks li a
 {
   padding: 0px 10px;
   border-radius: 3px;
@@ -332,7 +332,7 @@ button.btn-nav-nft
   line-height: 20px;
 }
 
-.checkbtn 
+.checkbtn
 {
   float: right;
   cursor: pointer;
@@ -342,12 +342,12 @@ button.btn-nav-nft
   display: flex;
 }
 
-#check 
+#check
 {
   display: none;
 }
 
-.navlinks 
+.navlinks
 {
   position: fixed;
   width: 100%;
@@ -359,19 +359,19 @@ button.btn-nav-nft
   transition: all 0.5s;
 }
 
-.navlinks li 
+.navlinks li
 {
   display: block;
   margin: 30px 0;
   line-height: 30px;
 }
 
-#check:checked ~ ul 
+#check:checked ~ ul
 {
   left: 0;
 }
 
-.desktop 
+.desktop
 {
   display: none;
 }
@@ -382,13 +382,13 @@ button.btn-nav-nft
 }
 
 /*********-------------------- HERO -----------------**********/
-.hero 
+.hero
 {
   min-height: 100vh;
   overflow: hidden;
   display: flex;
   align-items: center;
-  justify-content: center; 
+  justify-content: center;
 }
 
 .hero-content
@@ -401,7 +401,7 @@ button.btn-nav-nft
   width: 90%;
 }
 
-.hero-title 
+.hero-title
 {
   font-family: 'Inter';
   font-style: normal;
@@ -424,7 +424,7 @@ p.text-p
   font-size: 16px
 }
 
-.hover-button 
+.hover-button
 {
   position: relative;
   overflow: hidden;
@@ -442,13 +442,13 @@ p.text-p
   font-weight: 600;
 }
 
-.button-text 
+.button-text
 {
   position: relative;
   z-index: 2;
 }
 
-.hover-button:hover 
+.hover-button:hover
 {
   left: 0;
   background: none;
@@ -465,7 +465,7 @@ p.text-p
   margin: auto;
 }
 
-.services-header 
+.services-header
 {
   width: 90%;
   margin: auto;
@@ -485,24 +485,24 @@ p.text-p
   width: 220px;
 }
 
-.services .support 
+.services .support
 {
   width: 200px;
   right: 0em;
 }
 
-.services .otc 
+.services .otc
 {
   height: 171px;
 }
 
-.services .phone 
+.services .phone
 {
   border-radius: 30px;
   margin-bottom: -4px;
 }
 
-.services .stakings 
+.services .stakings
 {
   width: 252px;
   height: 100%;
@@ -521,20 +521,20 @@ p.text-p
   height: 100%;
 }
 
-.services-cards 
+.services-cards
 {
   margin-top: 77px;
   padding: 0em 2em;
 }
 
-.img-card-div.text-end.no-bottom 
+.img-card-div.text-end.no-bottom
 {
   text-align: end;
 }
 
 
 /*********-------------------- NFTS -----------------**********/
-.section-nfts 
+.section-nfts
 {
   text-align: center;
 }
@@ -549,7 +549,7 @@ p.text-p
   padding: 0em 2em;
 }
 
-.btn-purchase 
+.btn-purchase
 {
   width: 245px;
   text-align: center;
@@ -558,7 +558,7 @@ p.text-p
   font-size: 20px;
 }
 
-.info-btn 
+.info-btn
 {
   border: none;
   background: none;
@@ -567,7 +567,7 @@ p.text-p
   cursor: pointer;
 }
 
-.info-btn img 
+.info-btn img
 {
   width: 100%;
 }
@@ -577,7 +577,7 @@ p.text-p
   margin: auto;
 }
 
-.card-nft 
+.card-nft
 {
   width: 100%;
   height: 517px;
@@ -585,7 +585,7 @@ p.text-p
   margin-bottom: 2em;
 }
 
-.front, .back 
+.front, .back
 {
   width: 100%;
   height: 100%;
@@ -597,7 +597,7 @@ p.text-p
   padding: 32px;
 }
 
-.front 
+.front
 {
   display: flex;
   flex-direction: column;
@@ -608,7 +608,7 @@ p.text-p
   overflow: hidden;
 }
 
-.back 
+.back
 {
   display: flex;
   flex-direction: column;
@@ -618,18 +618,18 @@ p.text-p
   overflow: hidden;
 }
 
-.last-of-info 
+.last-of-info
 {
   padding: 65px 40px;
   text-align: start;
 }
 
-.card-nft.flip .front 
+.card-nft.flip .front
 {
   transform: rotateY(180deg);
 }
 
-.card-nft.flip .back 
+.card-nft.flip .back
 {
   transform: rotateY(0deg);
 }
@@ -640,7 +640,7 @@ input
   font-size: 18px;
 }
 
-input.cantidad 
+input.cantidad
 {
   width: 43px;
   background: #f3f4f7;
@@ -651,7 +651,7 @@ input.cantidad
   font-weight: 600;
 }
 
-input.precioTotal 
+input.precioTotal
 {
   width: 82px;
   background: #f3f4f7;
@@ -661,20 +661,20 @@ input.precioTotal
   font-weight: 600;
 }
 
-.sumar 
+.sumar
 {
   margin-right: 17px;
   font-size: 25px;
   cursor: pointer;
 }
 
-.restar 
+.restar
 {
   font-size: 25px;
   cursor: pointer;
 }
 
-span.close-btn 
+span.close-btn
 {
   width: 35px;
   height: 35px;
@@ -692,63 +692,63 @@ span.close-btn
   filter: invert(1);
   transition: all .1s;
 }
-.close-btn:hover 
+.close-btn:hover
 {
   background: black;
   transition: all .1s;
 }
 
-.data-back 
+.data-back
 {
   text-align: start;
   font-size: 21px;
   margin-top: 20px;
 }
 
-.card-img-back 
+.card-img-back
 {
   margin: auto 0px 0px auto;
 }
 
-.back-img1 
+.back-img1
 {
   width: 218px;
 }
-.back-img2 
+.back-img2
 {
   width: 184px;
 }
-.back-img3 
+.back-img3
 {
   width: 196px;
 }
-.back-img1 > img 
+.back-img1 > img
 {
   width: 100%;
 }
-.back-img2 > img 
+.back-img2 > img
 {
   width: 100%;
 }
-.back-img3 > img 
+.back-img3 > img
 {
   width: 100%;
 }
 
 
 /*********-------------------- TOKENOMICS -----------------**********/
-.divs-tokenomics 
+.divs-tokenomics
 {
   padding: 0em 2em;
 }
 
-.tokenomics-header 
+.tokenomics-header
 {
   padding: 5em 2em 2em;
   text-align: center;
 }
 
-.development-div 
+.development-div
 {
   width: 100%;
   height: 556px;
@@ -759,28 +759,28 @@ span.close-btn
   border-radius: 10px;
 }
 
-.toke-div 
+.toke-div
 {
   transition: transform 0.3s ease;
   margin-bottom: 2em;
 }
 
-.toke-div:hover 
+.toke-div:hover
 {
   transform: scale(1.05);
 }
 
-.mark-h3 
+.mark-h3
 {
   margin: 0px 0px auto auto;
 }
-.mark-h4 
+.mark-h4
 {
   margin: auto auto 0px 0px !important;
   text-align: start ;
 }
 
-.h3-porcentage 
+.h3-porcentage
 {
   text-align: start;
   color: white;
@@ -788,7 +788,7 @@ span.close-btn
   font-size: 36px;
 }
 
-.h4-name 
+.h4-name
 {
   text-align: end;
   margin: auto;
@@ -800,7 +800,7 @@ span.close-btn
   line-height: 28px;
 }
 
-.liquidity 
+.liquidity
 {
   width: 100%;
   height: 343px;
@@ -809,7 +809,7 @@ span.close-btn
   border-radius: 30px;
 }
 
-.staking 
+.staking
 {
   width: 100%;
   height: 193px;
@@ -817,7 +817,7 @@ span.close-btn
   background-size: cover;
   border-radius: 30px;
 }
-.marketing 
+.marketing
 {
   width: 100%;
   height: 210px;
@@ -825,7 +825,7 @@ span.close-btn
   background-size: cover;
   border-radius: 30px;
 }
-.advisor 
+.advisor
 {
   width: 100%;
   height: 159px;
@@ -834,7 +834,7 @@ span.close-btn
   border-radius: 30px;
 }
 
-.team 
+.team
 {
   width: 100%;
   height: 160px;
@@ -843,7 +843,7 @@ span.close-btn
   border-radius: 30px;
 }
 
-.legal 
+.legal
 {
   width: 100%;
   height: 427px;
@@ -854,7 +854,7 @@ span.close-btn
 
 
 /*********-------------------- ROADMAP -----------------**********/
-.carousel 
+.carousel
 {
   position: relative;
   overflow: hidden;
@@ -867,7 +867,7 @@ span.close-btn
   margin-top: 5em;
 }
 
-.cards 
+.cards
 {
   display: flex;
   width: 100%;
@@ -875,7 +875,7 @@ span.close-btn
   transition: transform 0.3s ease-in-out;
 }
 
-.card-slide 
+.card-slide
 {
   flex: 0 0 83%;
   width: 100%;
@@ -893,16 +893,16 @@ span.close-btn
 .title-roadmap
 {
   margin-bottom: 29px;
-} 
+}
 
-.card-slide ul 
+.card-slide ul
 {
   font-size: 22px;
   line-height: 37px;
   font-weight: 600;
 }
 
-.card-slide ul 
+.card-slide ul
 {
   font-size: 16px;
   line-height: 23px;
@@ -910,12 +910,12 @@ span.close-btn
   color: white;
 }
 
-.lista li 
+.lista li
 {
   margin-bottom: .7em;
-} 
+}
 
-.ticks 
+.ticks
 {
   width: 20.01px;
   height: 20px;
@@ -924,7 +924,7 @@ span.close-btn
 
 /* Estilos de las flechas */
 .prev,
-.next 
+.next
 {
   position: absolute;
   top: 50%;
@@ -938,42 +938,42 @@ span.close-btn
   height: 40px;
   width: 40px;
 }
-.next > img  
+.next > img
 {
   margin: auto;
   height: 100%;
 }
-.prev > img  
+.prev > img
 {
   margin: auto;
   height: 100%;
   transform: rotate(180deg);
 }
 
-.prev 
+.prev
 {
   left: 10px;
   display: none;
 }
-.next 
+.next
 {
   right: 10px;
 }
 
 
 /*********-------------------- PARTNERS -----------------**********/
-.partners-header 
+.partners-header
 {
   padding: 5em 2em 2em;
   text-align: center;
 }
 
-.logos-partners 
+.logos-partners
 {
   margin: 2em 0em;
 }
 
-.partners-container 
+.partners-container
 {
   width: 100%;
   box-sizing: border-box;
@@ -982,16 +982,16 @@ span.close-btn
   text-align: center !important;
 }
 
-.pd-right 
+.pd-right
 {
   padding-right: 25px;
 }
-.pd-left 
+.pd-left
 {
   padding-left: 25px;
 }
 
-img.wayops 
+img.wayops
 {
   width: 150px;
 }
@@ -999,15 +999,15 @@ img.consultin
 {
   width: 200px;
 }
-img.waynance 
+img.waynance
 {
   width: 200px;
 }
-img.metamask 
+img.metamask
 {
   width: 200px;
 }
-img.binance 
+img.binance
 {
   width: 200px;
 }
@@ -1024,12 +1024,12 @@ img.binance
   text-align: center;
 }
 
-.icon 
+.icon
 {
   margin-bottom: 2em;
 }
 
-.press-releases-card.flex 
+.press-releases-card.flex
 {
   background: #FFFFFF;
   border-radius: 30px;
@@ -1055,13 +1055,13 @@ img.binance
   width: auto;
 }
 
-.text-start 
+.text-start
 {
   text-align: start;
 }
 
 /*********-------------------- FOOTER -----------------**********/
-.h3-footer 
+.h3-footer
 {
   font-weight: 500;
   font-size: 18px;
@@ -1073,7 +1073,7 @@ img.binance
   margin-bottom: .8em;
 }
 
-footer 
+footer
 {
   background: black;
   color: white;
@@ -1081,7 +1081,7 @@ footer
   box-sizing: border-box;
 }
 
-.container-footer 
+.container-footer
 {
   display: flex;
   flex-wrap: wrap;
@@ -1089,13 +1089,13 @@ footer
   text-align: center;
 }
 
-footer .column 
+footer .column
 {
   width: 50%;
   margin-bottom: 1em;
 }
 
-footer .column2 
+footer .column2
 {
   width: 50%;
 }
@@ -1107,18 +1107,18 @@ footer ul
   line-height: 28px;
 }
 
-h3 
+h3
 {
   margin-bottom: 10px;
 }
 
-ul 
+ul
 {
   list-style: none;
   padding: 0;
 }
 
-.social-icons 
+.social-icons
 {
   display: flex;
   justify-content: center;
@@ -1126,12 +1126,12 @@ ul
   flex-wrap: wrap;
 }
 
-.social-icons li 
+.social-icons li
 {
   margin-right: 7px;
 }
 
-.social-icons img 
+.social-icons img
 {
   display: block;
   width: 35px;
@@ -1144,9 +1144,9 @@ ul
   width: 100%;
 }
 
-@media (min-width: 600px) 
+@media (min-width: 600px)
 {
-  .mobile 
+  .mobile
   {
     display: none;
   }
@@ -1161,7 +1161,7 @@ ul
     display: block;
   }
 
-  .flex 
+  .flex
   {
     display: flex;
     align-items: center;
@@ -1173,31 +1173,31 @@ ul
   {
     text-align: end;
   }
-  .consulting-div 
+  .consulting-div
   {
     text-align: start;
   }
 
   /*********--- NAV ---**********/
-  nav 
+  nav
   {
     display: flex;
     justify-content: center;
   }
 
-  .lang-icon 
+  .lang-icon
   {
     margin-right: 0px;
   }
 
-  .nav 
+  .nav
   {
     display: flex;
     justify-content: space-between;
     padding: 0em 2em !important;
   }
 
-  .navlinks 
+  .navlinks
   {
     position: relative;
     margin: 0em;
@@ -1208,10 +1208,10 @@ ul
     left: auto;
     right: auto;
     top: auto;
-    justify-content: flex-start;  
+    justify-content: flex-start;
     width: auto;
   }
- 
+
   .checkbtn
   {
     display: none;
@@ -1223,7 +1223,7 @@ ul
   }
 
   /*********-------------------- HERO -----------------**********/
-  .hero 
+  .hero
   {
     min-height: 80vh;
   }
@@ -1235,53 +1235,53 @@ ul
     margin-top: 77px;
     padding: 0em;
   }
-  
-  .toke-div 
+
+  .toke-div
   {
     margin-bottom: 0em;
   }
 
-  .development-div 
+  .development-div
   {
     width: 305.2px;
     border-radius: 30px;
   }
 
-  .liquidity 
+  .liquidity
   {
     width: 202px;
     margin-bottom: 20px;
   }
 
-  .staking 
+  .staking
   {
     width: 202px;
   }
 
-  .marketing 
+  .marketing
   {
     width: 529px;
     margin-top: 20px;
   }
 
-  .advisor 
+  .advisor
   {
     width: 225px;
     margin-bottom: 20px;
   }
 
-  .team 
+  .team
   {
     width: 225px;
     margin-bottom: 20px;
   }
 
-  .legal 
+  .legal
   {
     width: 225px;
   }
 
-  .flex-right 
+  .flex-right
   {
     width: 100%;
     margin-left: 20px;
@@ -1289,16 +1289,16 @@ ul
 
 
   /*********--- Roadmap ---**********/
-  .card-slide 
+  .card-slide
   {
     flex: 0 0 100% !important;
     width: 100%;
-    padding: 40px;  
+    padding: 40px;
     height: 528px;
     margin: 0em;
   }
-  
-  .card-slide ul 
+
+  .card-slide ul
   {
     font-size: 22px;
     line-height: 37px;
@@ -1322,7 +1322,7 @@ ul
   {
     margin-right: 20px;
   }
-  .card-nft 
+  .card-nft
   {
     width: 48%;
     margin-bottom: 0px;
@@ -1330,7 +1330,7 @@ ul
 
 }
 
-@media (min-width: 993px) 
+@media (min-width: 993px)
 {
 
   .tablet
@@ -1338,17 +1338,17 @@ ul
     display: none;
   }
 
-  .mobile 
+  .mobile
   {
     display: none;
   }
 
-  .lista li 
+  .lista li
   {
-     margin-bottom: 0em; 
+     margin-bottom: 0em;
   }
 
-  .nav 
+  .nav
   {
     width: 777px;
     padding: 0px !important;
@@ -1361,12 +1361,12 @@ ul
     margin-bottom: 0px;
   }
 
-  .title-card 
+  .title-card
   {
     font-size: 32px;
   }
 
-  .text-card 
+  .text-card
   {
     font-size: 20px;
   }
@@ -1377,30 +1377,30 @@ ul
     height: 428px;
   }
 
-  .card-small 
+  .card-small
   {
     width: 377px;
     height: 517px;
   }
 
-  .flex-cards 
+  .flex-cards
   {
     display: flex;
     align-items: center;
   }
 
-  .no-bottom 
+  .no-bottom
   {
     margin-bottom: 0px !important;
   }
 
-  .h2 
+  .h2
   {
     font-size: 55px;
-    line-height: 65px;  
+    line-height: 65px;
   }
 
-  .left-card 
+  .left-card
   {
     padding: 65px 40px 0px 40px;
     text-align: start;
@@ -1409,7 +1409,7 @@ ul
 
 
   /*********--- HERO ---**********/
-  .hero 
+  .hero
   {
     height: 100vh;
     padding-top: 70px;
@@ -1420,7 +1420,7 @@ ul
     width: 590px;
   }
 
-  .hero-title 
+  .hero-title
   {
     font-size: 63px;
     line-height: 65px;
@@ -1430,10 +1430,10 @@ ul
   p.text-p
   {
     font-size: 32px;
-    line-height: 40px;  
+    line-height: 40px;
   }
 
-  .hero::after 
+  .hero::after
   {
     content: "";
     position: absolute;
@@ -1452,7 +1452,7 @@ ul
     box-sizing: border-box;
   }
 
-  .hero.is-scrolled::after 
+  .hero.is-scrolled::after
   {
     will-change: transform, opacity;
     transform: scale(1.15);
@@ -1467,11 +1467,11 @@ ul
     margin: auto;
     margin-top: 200px;
   }
-  .services-header 
+  .services-header
   {
     width: 100%;
   }
-  .services-cards 
+  .services-cards
   {
     padding: 0em;
   }
@@ -1493,14 +1493,14 @@ ul
 
 
   /*********--- Roadmap ---**********/
-  .card-slide 
+  .card-slide
   {
     height: 428px;
   }
 
 
   /*********--- NFTs ---**********/
-  .card-nft 
+  .card-nft
   {
     width: 377px;
   }
@@ -1512,22 +1512,22 @@ ul
   {
     padding: 0em;
   }
-  
+
 
 
   /*********-------------------- PARTNERS -----------------**********/
-  .partners-header 
+  .partners-header
   {
     margin-bottom: 77px;
     padding: 0em;
   }
 
-  .logos-partners 
+  .logos-partners
   {
     margin: 0em 0em;
   }
-  
-  .text-end 
+
+  .text-end
   {
     text-align: end;
   }
@@ -1540,7 +1540,7 @@ ul
     width: 30%;
   }
 
-  img.wayops 
+  img.wayops
   {
     width: 200px;
   }
@@ -1548,21 +1548,21 @@ ul
   {
     width: 260px;
   }
-  img.waynance 
+  img.waynance
   {
     width: 230px;
   }
-  img.metamask 
+  img.metamask
   {
     width: 340px;
   }
-  img.binance 
+  img.binance
   {
     width: 319px;
   }
 
 
-  .tokenomics-header 
+  .tokenomics-header
   {
     padding: 0em;
   }
@@ -1573,7 +1573,7 @@ ul
 
 
   /*********-------------------- PRESS RELEASES -----------------**********/
-  .partners-container .first 
+  .partners-container .first
   {
     display: flex;
     flex-direction: column;
@@ -1595,7 +1595,7 @@ ul
     align-items: flex-end;
     flex-direction: row;
   }
-  .icon 
+  .icon
   {
     width: 33.3%;
     margin: 1.5em 0em;
@@ -1604,12 +1604,12 @@ ul
 
 
   /*********--- FOOTER ---**********/
-  footer 
+  footer
   {
     text-align: start;
   }
 
-  .container-footer 
+  .container-footer
   {
     flex-wrap: nowrap;
     width: 777px;
@@ -1617,18 +1617,18 @@ ul
     text-align: start;
   }
 
-  .h3-footer 
+  .h3-footer
   {
     text-align: start;
     margin-left: 0px;
   }
 
-  .social-icons 
+  .social-icons
   {
     flex-wrap: nowrap;
   }
 
-  .column 
+  .column
   {
     width: 25%;
   }
@@ -1639,6 +1639,85 @@ ul
   }
 
 
- 
+
 }
 
+/* Animations to fade the snackbar in and out */
+@-webkit-keyframes fadein {
+  from {
+    bottom: 0;
+    opacity: 0;
+  }
+  to {
+    bottom: 30px;
+    opacity: 1;
+  }
+}
+
+@keyframes fadein {
+  from {
+    bottom: 0;
+    opacity: 0;
+  }
+  to {
+    bottom: 30px;
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadeout {
+  from {
+    bottom: 30px;
+    opacity: 1;
+  }
+  to {
+    bottom: 0;
+    opacity: 0;
+  }
+}
+
+@keyframes fadeout {
+  from {
+    bottom: 30px;
+    opacity: 1;
+  }
+  to {
+    bottom: 0;
+    opacity: 0;
+  }
+}
+
+#button_container {
+  width: 100%;
+  display: none
+}
+
+.container_load {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-top: 50px
+}
+
+.error_label {
+  color: red;
+  margin-top: 10px
+}
+
+
+.hover-disabled {
+  position: relative;
+  overflow: hidden;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  width: 184px;
+  height: 45px;
+  background: #73787c;
+  border-radius: 30px;
+  color: white;
+  border: none;
+  margin-top: 29px;
+  transition: all 0.3s;
+  font-weight: 600;
+}
