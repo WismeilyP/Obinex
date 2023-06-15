@@ -43,7 +43,7 @@ var app = new Vue({
       window.ethereum.on('networkChanged', async function (chainId) {
         await $this.networkChanged(chainId)
       })
-
+  
       window.ethereum.on('accountsChanged', async function () {
         await $this.accountsChanged()
       })
@@ -84,7 +84,7 @@ var app = new Vue({
             this.allowance = allowance != 0
           }
         }
-
+        
         this.loading = false;
       }
       catch (e) {
