@@ -2,9 +2,11 @@ var app = new Vue({
   el: '#obinex',
   data: {
     MAX_INT: '115792089237316195423570985008687907853269984665640564039457584007913129639935',
-    contractTokenPay: "0x2803c135AD2B4f235c7Cbcaab79F55E2B0885d4f",
+    contractBUSD: "0x2803c135AD2B4f235c7Cbcaab79F55E2B0885d4f",
+    contractUSDT: "0x2bF01494d619c5bC62c64A1E359964DAC4cA4E41",
     contractOF: '0xb4D0bC8A75135b70094a79a28ed312C1C00A333A',
-    contractSale: "0x0B1993dc26aA02E9818d7b87B4c9003145fb635e",
+    contractSale: "0x3Ab2C18E216D01a44045B73376F2B761133C819b",
+    coinSelect: 0,
     etherumInstall: false,
     loading: true,
     message_error: "",
@@ -43,7 +45,7 @@ var app = new Vue({
       window.ethereum.on('networkChanged', async function (chainId) {
         await $this.networkChanged(chainId)
       })
-  
+
       window.ethereum.on('accountsChanged', async function () {
         await $this.accountsChanged()
       })
@@ -63,6 +65,10 @@ var app = new Vue({
         x.className = x.className.replace("show", "");
       }, 3000);
     },
+    async onChangeCoin(coin){
+      this.coinSelect=coin;
+      await this.check();
+    },
     async check() {
       this.loading = true;
       try{
@@ -78,13 +84,13 @@ var app = new Vue({
             this.indexChainId = index;
             this.statusPermit = permit;
             this.nodeRPC = node;
-            this.balanceEther = await this.getETHBalance(address)
-            this.balanceUSDT = await this.balanceOfTokenId(address, this.contractTokenPay)
+            //this.balanceEther = await this.getETHBalance(address)
+            //this.balanceUSDT = await this.balanceOfTokenId(address, this.contractTokenPay)
             const allowance = await this.onAllowance()
             this.allowance = allowance != 0
           }
         }
-        
+
         this.loading = false;
       }
       catch (e) {
@@ -190,7 +196,8 @@ var app = new Vue({
     async onAllowance() {
       const erc20Abi = await this.loadAbi("abi")
       const web3 = new Web3(Web3.givenProvider)
-      const contract = new web3.eth.Contract(erc20Abi, this.contractTokenPay)
+      const _token = this.coinSelect==0 ? this.contractBUSD : this.contractUSDT;
+      const contract = new web3.eth.Contract(erc20Abi, _token)
       const allowance = await contract.methods.allowance(this.address, this.contractSale).call()
       return allowance
     },
@@ -199,7 +206,8 @@ var app = new Vue({
       this.loading = true;
       const erc20Abi = await this.loadAbi("abi")
       const web3 = new Web3(Web3.givenProvider)
-      const contract = new web3.eth.Contract(erc20Abi, this.contractTokenPay)
+      const _token = this.coinSelect==0 ? this.contractBUSD : this.contractUSDT;
+      const contract = new web3.eth.Contract(erc20Abi, _token)
       try {
         const method = await this.executeMethod(contract.methods.approve(this.contractSale, value), {from: this.address})
         const tx = await method.send({from: this.address})
@@ -240,11 +248,12 @@ var app = new Vue({
           amounts.push(this.nft3)
         }
 
+        const _token = this.coinSelect==0 ? this.contractBUSD : this.contractUSDT;
         const purchaseABI = await this.loadAbi("abi");
         const web3 = new Web3(Web3.givenProvider)
         const contract = new web3.eth.Contract(purchaseABI, this.contractSale)
         try {
-          const method = await this.executeMethod(contract.methods.publicSale(ids, amounts), {from: this.address})
+          const method = await this.executeMethod(contract.methods.publicSale(_token, ids, amounts), {from: this.address})
           const tx = await method.send({from: this.address})
           this.showSuccessMessage("The purchase has been successfully completed")
         }

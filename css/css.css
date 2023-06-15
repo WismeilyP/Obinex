@@ -1689,7 +1689,8 @@ ul
 
 #button_container {
   width: 100%;
-  display: none
+  display: none;
+  height: 220px;
 }
 
 .container_load {
@@ -1720,4 +1721,9 @@ ul
   margin-top: 29px;
   transition: all 0.3s;
   font-weight: 600;
+}
+
+button.btn-coin{
+  margin-top: 50px;
+  width: 100px;
 }

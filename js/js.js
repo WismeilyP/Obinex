@@ -1,5 +1,5 @@
 /*********--- Monedas del hero ---**********/
-window.addEventListener('scroll', function() 
+window.addEventListener('scroll', function()
 {
   var hero = document.querySelector('.hero');
   var scrollPosition = window.pageYOffset;
@@ -13,17 +13,17 @@ window.addEventListener('scroll', function()
 
 
 /*********--- Cards NFTs---**********/
-function flipCard() 
+function flipCard()
 {
   var inform= document.getElementById("this");
   inform.classList.toggle('flip')
 }
-function flipCard2() 
+function flipCard2()
 {
   var inform2= document.getElementById("this2");
   inform2.classList.toggle('flip')
 }
-function flipCard3() 
+function flipCard3()
 {
   var inform3= document.getElementById("this3");
   inform3.classList.toggle('flip')
@@ -36,7 +36,7 @@ document.addEventListener("DOMContentLoaded", function() {
   }
 
   function cambiarCantidad(input, cambio, resultado, precio) {
-      input.value = Math.max(1, parseFloat(input.value) + cambio);
+      input.value = Math.max(0, parseFloat(input.value) + cambio);
       calcularPrecioTotal(input, resultado, precio);
   }
 
@@ -50,9 +50,9 @@ document.addEventListener("DOMContentLoaded", function() {
       document.getElementById(`sumar_${inputId}`).addEventListener("click", () => cambiarCantidad(input, 1, resultado, precio));
   }
 
-  setupCalculadora("cantidad1", "precioTotal1", 250);
-  setupCalculadora("cantidad2", "precioTotal2", 300);
-  setupCalculadora("cantidad3", "precioTotal3", 400);
+  setupCalculadora("cantidad1", "precioTotal1", 75);
+  setupCalculadora("cantidad2", "precioTotal2", 200);
+  setupCalculadora("cantidad3", "precioTotal3", 600);
 
 });
 

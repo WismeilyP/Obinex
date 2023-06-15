@@ -365,14 +365,40 @@
                             <span class="hover-effect"></span>
                         </button>
 
-                        <button class="hover-button btn-purchase" v-if="!loading && is_connect && statusPermit"
-                                v-on:click='purchase'>
-                            <div class="button-text">
-                                <span v-if="!allowance">Approve</span>
-                                <span v-if="allowance">Purchase now</span>
+                        <div v-if="!loading && is_connect" style="display: flex; justify-content: center;">
+                            <div style="width: 280px;">
+                                <div style="display: flex; flex-direction: rows; gap:20px;">
+                                    <button class="btn-purchase btn-coin"
+                                            v-on:click="()=>onChangeCoin(0)"
+                                            v-bind:class="{'hover-disabled':coinSelect==0, 'hover-button':coinSelect==1, }">
+                                        <div class="button-text">
+                                            BUSD
+                                        </div>
+                                        <span class="hover-effect"></span>
+                                    </button>
+
+                                    <button class="btn-purchase btn-coin"
+                                            v-on:click="()=>onChangeCoin(1)"
+                                            v-bind:class="{'hover-disabled':coinSelect==1, 'hover-button':coinSelect==0, }">
+                                        <div class="button-text">
+                                            USDT
+                                        </div>
+                                        <span class="hover-effect"></span>
+                                    </button>
+                                </div>
+                                <div>
+                                    <button style="width:100%" class="hover-button btn-purchase" v-if="!loading && is_connect && statusPermit"
+                                            v-on:click='purchase'>
+                                        <div class="button-text">
+                                            <span v-if="!allowance">Approve</span>
+                                            <span v-if="allowance">Buy now</span>
+                                        </div>
+                                        <span class="hover-effect"></span>
+                                    </button>
+                                </div>
                             </div>
-                            <span class="hover-effect"></span>
-                        </button>
+                        </div>
+
 
                         <button class="hover-button btn-purchase" v-if="!loading && is_connect && !statusPermit" v-on:click='changeNetwork'>
                             <div class="button-text">Change network</div>
