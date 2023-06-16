@@ -19,9 +19,9 @@ function init() {
     document.getElementById(`sumar_${inputId}`).addEventListener("click", () => cambiarCantidad(input, 1, resultado, precio));
   }
 
-  setupCalculadora("cantidad1", "precioTotal1", 75);
+  setupCalculadora("cantidad1", "precioTotal1", 600);
   setupCalculadora("cantidad2", "precioTotal2", 200);
-  setupCalculadora("cantidad3", "precioTotal3", 600);
+  setupCalculadora("cantidad3", "precioTotal3", 75);
 }
 
 fetch('/contracts/buttons.html')
@@ -125,8 +125,7 @@ fetch('/contracts/buttons.html')
             }
 
             this.loading = false;
-          }
-          catch (e) {
+          } catch (e) {
             this.loading = false;
           }
         },
@@ -134,8 +133,7 @@ fetch('/contracts/buttons.html')
           try {
             const isC = await window.ethereum.request({method: 'eth_accounts'})
             return [isC.length > 0, isC[0]]
-          }
-          finally {
+          } finally {
             this.loading = false;
           }
         },
@@ -143,8 +141,7 @@ fetch('/contracts/buttons.html')
           try {
             await window.ethereum.enable();
             await this.check();
-          }
-          catch {
+          } catch {
           }
         },
         async networkChanged(chainId) {
@@ -174,9 +171,7 @@ fetch('/contracts/buttons.html')
               params: [{chainId: hex}] // Cambiar al ID de red de Ropsten
             })
             await this.check();
-          }
-          catch {
-
+          } catch {
           }
         },
         async loadAbi(name) {
@@ -194,21 +189,17 @@ fetch('/contracts/buttons.html')
                 if (e.message.includes('execution reverted')) {
                   try {
                     message = e.message.split('"execution reverted:')[1].split('"')[0];
-                  }
-                  catch (r) {
+                  } catch (r) {
                     try {
                       message = e.message.split('"message": "')[1].split('"')[0];
-                    }
-                    catch (e) {
+                    } catch (e) {
                       message = "Undetermined error."
                     }
                   }
                   throw new Error(message);
-                }
-                else
+                } else
                   throw new Error(message);
-              }
-              else {
+              } else {
                 throw new Error(message);
               }
 
@@ -245,16 +236,13 @@ fetch('/contracts/buttons.html')
             const method = await this.executeMethod(contract.methods.approve(this.contractSale, value), {from: this.address})
             const tx = await method.send({from: this.address})
             this.check()
-          }
-          catch (e) {
+          } catch (e) {
             if ('message'.includes(e)) {
               this.message_error = e;
-            }
-            else {
+            } else {
               this.message_error = e.message
             }
-          }
-          finally {
+          } finally {
             this.loading = false;
           }
         },
@@ -264,8 +252,7 @@ fetch('/contracts/buttons.html')
           const allowance = await this.onAllowance()
           if (allowance == 0) {
             this.onApprove(this.spender, this.MAX_INT)
-          }
-          else {
+          } else {
             const ids = [];
             const amounts = [];
 
@@ -287,26 +274,29 @@ fetch('/contracts/buttons.html')
               amounts.push(this.nft3)
             }
 
-            const _token = this.coinSelect == 0 ? this.contractBUSD : this.contractUSDT;
-            const purchaseABI = await this.loadAbi("abi");
-            const web3 = new Web3(Web3.givenProvider)
-            const contract = new web3.eth.Contract(purchaseABI, this.contractSale)
-            try {
-              const method = await this.executeMethod(contract.methods.publicSale(_token, ids, amounts), {from: this.address})
-              const tx = await method.send({from: this.address})
-              this.showSuccessMessage("The purchase has been successfully completed")
-            }
-            catch (e) {
-              if ('message'.includes(e)) {
-                this.message_error = e;
-              }
-              else {
-                this.message_error = e.message
-              }
-            }
-            finally {
+            if (this.nft1 == 0 && this.nft2 == 0 && this.nft3 == 0) {
+              this.message_error = 'You must select at least one NFT to buy.'
               this.loading = false;
+            } else {
+              const _token = this.coinSelect == 0 ? this.contractBUSD : this.contractUSDT;
+              const purchaseABI = await this.loadAbi("abi");
+              const web3 = new Web3(Web3.givenProvider)
+              const contract = new web3.eth.Contract(purchaseABI, this.contractSale)
+              try {
+                const method = await this.executeMethod(contract.methods.publicSale(_token, ids, amounts), {from: this.address})
+                const tx = await method.send({from: this.address})
+                this.showSuccessMessage("The purchase has been successfully completed")
+              } catch (e) {
+                if ('message'.includes(e)) {
+                  this.message_error = e;
+                } else {
+                  this.message_error = e.message
+                }
+              } finally {
+                this.loading = false;
+              }
             }
+
           }
         }
       }
