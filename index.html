@@ -13,7 +13,8 @@
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/loadingio/loading.css@v2.0.0/dist/loading.min.css"/>
         <script src="https://kit.fontawesome.com/c8db5d00c1.js" crossorigin="anonymous"></script>
-        <link rel="stylesheet" href="css/css.css">
+        <link rel="stylesheet" href="/css/css.css">
+        <link rel="stylesheet" href="/contracts/contract.css">
         <title>Obinex</title>
 
     </head>
@@ -207,7 +208,7 @@
 
 
             <!----------********* NFTs *********---------->
-            <section class="section section-nfts" id="obinex">
+            <section class="section section-nfts" id="contracts-app">
 
                 <div class="nft-header">
                     <p class="text-services">NFT Shop</p>
@@ -227,24 +228,24 @@
 
                 <div class="container-nfts">
 
-                    <div class="mg-right card-nft " id="this">
+                    <div class="mg-right card-nft " id="this3">
                         <div class="front card-white" >
 
-                            <button class="info-btn " onclick="flipCard()"><img src="./img/info-black.png" alt=""></button>
+                            <button class="info-btn " onclick="flipCard3()"><img src="./img/info-black.png" alt=""></button>
                             <img class="tarjeta-nft">
                             <div class="input-group flex">
                                 <div class="flex">
-                                    <span class="restar" id="restar_cantidad1">-</span>
-                                    <input class="cantidad" type="number" id="cantidad1" min="1" value="1">
-                                    <span class="sumar" id="sumar_cantidad1">+</span>
+                                    <span class="restar" id="restar_cantidad3">-</span>
+                                    <input class="cantidad" type="number" id="cantidad3" min="0" value="1">
+                                    <span class="sumar" id="sumar_cantidad3">+</span>
                                 </div>
-                                <input type="text" id="precioTotal1" class="precioTotal" readonly class="result-input precio" >
+                                <input type="text" id="precioTotal3" class="precioTotal" readonly class="result-input precio" >
                             </div>
 
                         </div>
 
                         <div class="back card-white">
-                            <span class="close-btn" onclick="flipCard()"><img src="./img/close.png" alt=""></span>
+                            <span class="close-btn" onclick="flipCard3()"><img src="./img/close.png" alt=""></span>
 
                             <div class="data-back">
                                 <ul>
@@ -255,7 +256,7 @@
                                 </ul>
                             </div>
 
-                            <div class="card-img-back  back-img1">
+                            <div class="card-img-back  back-img3">
                                 <img src="./img/phones.png" alt="">
                             </div>
                         </div>
@@ -269,7 +270,7 @@
                             <div class="input-group flex">
                                 <div class="flex">
                                     <span class="restar" id="restar_cantidad2">-</span>
-                                    <input class="cantidad" type="number" id="cantidad2" min="1" value="1">
+                                    <input class="cantidad" type="number" id="cantidad2" min="0" value="1">
                                     <span class="sumar" id="sumar_cantidad2">+</span>
                                 </div>
                                 <input type="text" id="precioTotal2" class="precioTotal" readonly class="result-input precio" >
@@ -295,24 +296,24 @@
                         </div>
                     </div>
 
-                    <div class="mg-right mg-top card-nft " id="this3">
+                    <div class="mg-right mg-top card-nft " id="this1">
                         <div class="front card-white" >
 
-                            <button class="info-btn " onclick="flipCard3()"><img src="./img/info-black.png" alt=""></button>
+                            <button class="info-btn " onclick="flipCard()"><img src="./img/info-black.png" alt=""></button>
                             <img class="tarjeta-nft">
                             <div class="input-group flex">
                                 <div class="flex">
-                                    <span class="restar" id="restar_cantidad3">-</span>
-                                    <input class="cantidad" type="number" id="cantidad3" min="1" value="1">
-                                    <span class="sumar" id="sumar_cantidad3">+</span>
+                                    <span class="restar" id="restar_cantidad1">-</span>
+                                    <input class="cantidad" type="number" id="cantidad1" min="0" value="1">
+                                    <span class="sumar" id="sumar_cantidad1">+</span>
                                 </div>
-                                <input type="text" id="precioTotal3" class="precioTotal" readonly class="result-input precio" >
+                                <input type="text" id="precioTotal1" class="precioTotal" readonly class="result-input precio" >
                             </div>
 
                         </div>
 
                         <div class="back card-white">
-                            <span class="close-btn" onclick="flipCard3()"><img src="./img/close.png" alt=""></span>
+                            <span class="close-btn" onclick="flipCard()"><img src="./img/close.png" alt=""></span>
 
                             <div class="data-back">
                                 <ul>
@@ -323,7 +324,7 @@
                                 </ul>
                             </div>
 
-                            <div class="card-img-back  back-img3">
+                            <div class="card-img-back  back-img1">
                                 <img src="./img/cardBack3.png" alt="">
                             </div>
                         </div>
@@ -347,42 +348,7 @@
                         </div>
                     </div>
 
-                    <div id="button_container">
-                        <div id="snackbar">{{message_success}}</div>
-
-                        <div v-if="loading" class="container_load">
-                            <div class="ld ld-ball ld-flip-h" style="font-size:45px;color:black"></div>
-                        </div>
-
-                        <button v-if="!etherumInstall" class="hover-disabled btn-purchase">
-                            <div class="button-text">Install Metamask</div>
-                            <span class="hover-effect"></span>
-                        </button>
-
-                        <button class="hover-button btn-purchase" v-if="!loading && !is_connect && statusPermit && etherumInstall"
-                                v-on:click='connect'>
-                            <div class="button-text">Connect</div>
-                            <span class="hover-effect"></span>
-                        </button>
-
-                        <button class="hover-button btn-purchase" v-if="!loading && is_connect && statusPermit"
-                                v-on:click='purchase'>
-                            <div class="button-text">
-                                <span v-if="!allowance">Approve</span>
-                                <span v-if="allowance">Purchase now</span>
-                            </div>
-                            <span class="hover-effect"></span>
-                        </button>
-
-                        <button class="hover-button btn-purchase" v-if="!loading && is_connect && !statusPermit" v-on:click='changeNetwork'>
-                            <div class="button-text">Change network</div>
-                            <span class="hover-effect"></span>
-                        </button>
-
-                        <p class="error_label">
-                            {{message_error}}
-                        </p>
-                    </div>
+                    <contract-buttons/>
 
                 </div>
 
@@ -672,8 +638,8 @@
         </footer>
 
         <script src="https://cdnjs.cloudflare.com/ajax/libs/web3/1.6.0/web3.min.js"></script>
-        <script src="js/vue.min.js"></script>
-        <script src="contracts/script.js"></script>
-        <script src="js/js.js"></script>
+        <script src="/js/vue.min.js"></script>
+        <script src="/contracts/script.js"></script>
+        <script src="/js/js.js"></script>
     </body>
 </html>

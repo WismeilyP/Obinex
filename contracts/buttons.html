@@ -1,0 +1,65 @@
+<div id="button_container">
+    <div id="snackbar">{{message_success}}</div>
+
+    <div v-if="loading" class="container_load">
+        <div class="ld ld-ball ld-flip-h" style="font-size:45px;color:black"></div>
+    </div>
+
+    <button style="width:100%" v-if="!etherumInstall" class="hover-disabled btn-purchase">
+        <div class="button-text">Install Metamask</div>
+        <span class="hover-effect"></span>
+    </button>
+
+    <button class="hover-button btn-purchase"
+            v-if="!loading && !is_connect && statusPermit && etherumInstall"
+            v-on:click='connect'>
+        <div class="button-text">Connect Wallet</div>
+        <span class="hover-effect"></span>
+    </button>
+
+    <div v-if="!loading && is_connect && statusPermit" style="display: flex; justify-content: center;">
+        <div style="width: 280px;">
+            <div style="display: flex; flex-direction: row; gap:20px;">
+                <button class="btn-purchase"
+                        v-on:click="()=>onChangeCoin(0)"
+                        v-bind:class="{'hover-button tab-hover':coinSelect==0, 'btn-tab-disabled':coinSelect==1, }">
+                    <div class="button-text">
+                        BUSD
+                    </div>
+                    <span class="hover-effect"></span>
+                </button>
+
+                <button class="btn-purchase"
+                        v-on:click="()=>onChangeCoin(1)"
+                        v-bind:class="{'hover-button tab-hover':coinSelect==1, 'btn-tab-disabled':coinSelect==0, }">
+                    <div class="button-text">
+                        USDT
+                    </div>
+                    <span class="hover-effect"></span>
+                </button>
+            </div>
+            <div>
+                <button style="width:100%;margin-top: 20px;" class="hover-button btn-purchase"
+                        v-if="!loading && is_connect && statusPermit"
+                        v-on:click='purchase'>
+                    <div class="button-text">
+                        <span v-if="!allowance">Approve</span>
+                        <span v-if="allowance">Buy now</span>
+                    </div>
+                    <span class="hover-effect"></span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+
+    <button class="hover-button btn-purchase" v-if="!loading && is_connect && !statusPermit"
+            v-on:click='changeNetwork'>
+        <div class="button-text">Change network</div>
+        <span class="hover-effect"></span>
+    </button>
+
+    <p class="error_label">
+        {{message_error}}
+    </p>
+</div>
