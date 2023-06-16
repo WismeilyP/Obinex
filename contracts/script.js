@@ -19,9 +19,9 @@ function init() {
     document.getElementById(`sumar_${inputId}`).addEventListener("click", () => cambiarCantidad(input, 1, resultado, precio));
   }
 
-  setupCalculadora("cantidad1", "precioTotal1", 600);
+  setupCalculadora("cantidad1", "precioTotal1", 75);
   setupCalculadora("cantidad2", "precioTotal2", 200);
-  setupCalculadora("cantidad3", "precioTotal3", 75);
+  setupCalculadora("cantidad3", "precioTotal3", 600);
 }
 
 fetch('/contracts/buttons.html')
