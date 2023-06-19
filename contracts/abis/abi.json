@@ -222,7 +222,12 @@
   {
     "inputs": [
       {
-        "internalType": "enum IObinexFounders.Tier[]",
+        "internalType": "address",
+        "name": "_token",
+        "type": "address"
+      },
+      {
+        "internalType": "enum IOF.Tier[]",
         "name": "_ids",
         "type": "uint8[]"
       },
@@ -232,7 +237,7 @@
         "type": "uint256[]"
       }
     ],
-    "name": "publicSale",
+    "name": "buy",
     "outputs": [],
     "stateMutability": "payable",
     "type": "function"

@@ -15,7 +15,7 @@ body
   overflow-y: auto;
 }
 
-html 
+html
 {
   scroll-behavior: smooth;
 }
@@ -35,8 +35,8 @@ a
 {
   color: white !important;
 }
-.text-start 
-{ 
+.text-start
+{
   text-align: start !important;
 }
 
@@ -292,12 +292,12 @@ nav
   padding: 0em 1em;
 }
 
-.language-selector 
+.language-selector
 {
   position: relative;
 }
 
-.selected-language 
+.selected-language
 {
   cursor: pointer;
   display: flex;
@@ -309,17 +309,17 @@ nav
   font-weight: 700;
 }
 
-.selected-language .language-name 
+.selected-language .language-name
 {
   margin-right: 5px;
 }
 
-.selected-language .language-icon 
+.selected-language .language-icon
 {
   font-size: 12px;
 }
 
-.language-options 
+.language-options
 {
   position: absolute;
   top: 100%;
@@ -334,12 +334,12 @@ nav
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
 }
 
-.language-options li 
+.language-options li
 {
   padding: 8px 12px;
 }
 
-.language-options li a 
+.language-options li a
 {
   text-decoration: none;
   color: #333;
@@ -347,12 +347,12 @@ nav
   transition: color 0.3s;
 }
 
-.language-options li a:hover 
+.language-options li a:hover
 {
   color: #007EFC;
 }
 
-.language-options li:last-child 
+.language-options li:last-child
 {
   border-bottom: none;
 }
@@ -379,7 +379,7 @@ button.btn-nav-nft
   cursor: pointer;
 }
 
-.btn-nav-nft a 
+.btn-nav-nft a
 
 {
   color: white;
@@ -538,7 +538,7 @@ p.text-p
 
 
 /*********-------------------- SERVICIOS -----------------**********/
-.section 
+.section
 {
   margin-top: 183px !important;
 }
@@ -651,7 +651,7 @@ p.text-p
   position: absolute;
 }
 
-.info-btn:hover 
+.info-btn:hover
 {
   background: black;
   border-radius: 100%;
@@ -677,7 +677,7 @@ p.text-p
   width: 100%;
 }
 
-.card-nft 
+.card-nft
 {
   width: 100%;
   height: 585px;
@@ -686,7 +686,7 @@ p.text-p
 }
 
 .front,
-.back 
+.back
 {
   width: 100%;
   height: 100%;
@@ -699,7 +699,7 @@ p.text-p
   transform-style: preserve-3d; /* Agregamos esto para habilitar las transformaciones 3D */
 }
 
-.front 
+.front
 {
   display: flex;
   flex-direction: column;
@@ -710,7 +710,7 @@ p.text-p
   overflow: hidden;
 }
 
-.back 
+.back
 {
   display: flex;
   flex-direction: column;
@@ -721,18 +721,18 @@ p.text-p
   padding: 20px;
 }
 
-.last-of-info 
+.last-of-info
 {
   padding: 65px 40px;
   text-align: start;
 }
 
-.card-nft.flip .front 
+.card-nft.flip .front
 {
   transform: rotateY(180deg); /* Cambiamos el valor a 180deg */
 }
 
-.card-nft.flip .back 
+.card-nft.flip .back
 {
   transform: rotateY(0deg);
 }
@@ -993,7 +993,7 @@ span.close-btn
   align-items: center;
 }
 
-.carousel:hover > .next 
+.carousel:hover > .next
 {
   display: block;
 }
@@ -1333,7 +1333,7 @@ ul
   }
 
   /*********-------------------- HERO -----------------**********/
- 
+
 
   /*********--- TOKENOMICS ---**********/
   .divs-tokenomics
@@ -1801,7 +1801,6 @@ ul
 
 #button_container {
   width: 100%;
-  display: none
 }
 
 .container_load {
