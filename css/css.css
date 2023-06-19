@@ -31,10 +31,11 @@ html
   align-items: center;
 }
 
-a
+footer a 
 {
-  color: white !important;
+  color: white;
 }
+
 .text-start
 {
   text-align: start !important;
