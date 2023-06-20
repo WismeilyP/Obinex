@@ -348,6 +348,20 @@ nav
   transition: color 0.3s;
 }
 
+.es li a 
+{
+  padding: 0px 8px !important;
+}
+.btn-es 
+{
+  width: 120px !important;
+}
+
+.btn-es.btn-nav-nft 
+{
+  margin-right: 0px !important;
+}
+
 .language-options li a:hover
 {
   color: #007EFC;

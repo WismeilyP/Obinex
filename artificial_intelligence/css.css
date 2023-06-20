@@ -76,6 +76,17 @@ button.btn-nav-nft
   font-weight: 600;
   cursor: pointer;
 }
+
+.btn-es 
+{
+  width: 120px !important;
+}
+
+.btn-es.btn-nav-nft 
+{
+  margin-right: 0px !important;
+}
+
 .btn-nav-nft  a 
 {
   color: white;
@@ -108,6 +119,11 @@ button.btn-nav-nft
   font-weight: 600;
   color: #000;
   line-height: 20px;
+}
+
+.es li a 
+{
+  padding: 0px 8px;
 }
 
 .checkbtn 

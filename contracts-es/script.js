@@ -24,7 +24,7 @@ function init() {
   setupCalculadora("cantidad3", "precioTotal3", 75);
 }
 
-fetch('/contracts/buttons.html')
+fetch('/contracts-es/buttons.html')
   .then(response => response.text())
   .then(html => {
 
