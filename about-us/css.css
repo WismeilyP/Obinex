@@ -558,6 +558,12 @@ p.text-p
   align-items: center;
   justify-content: center;
 }
+.input-group input[type="number"]::-webkit-inner-spin-button,
+.input-group input[type="number"]::-webkit-outer-spin-button
+{
+    -webkit-appearance: none !important;
+    margin: 0;
+}
 
 .nft-header
 {
