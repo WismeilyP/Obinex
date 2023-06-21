@@ -1,0 +1,190 @@
+<div class="container-nfts">
+
+    <div class="mg-right card-nft " id="this">
+        <div class="front card-white">
+
+            <button class="info-btn " onclick="flipCard()"><img src="/img/info-black.png" alt=""></button>
+            <img class="tarjeta-nft" src="/img/nfts/Gold.gif" loop>
+            <div class="input-group flex">
+                <div class="flex">
+                    <span class="restar" id="restar_cantidad1">-</span>
+                    <input class="cantidad" type="number" id="cantidad1" min="0" value="0">
+                    <span class="sumar" id="sumar_cantidad1">+</span>
+                </div>
+                <input type="text" id="precioTotal1" class="precioTotal" readonly>
+            </div>
+
+        </div>
+
+        <div class="back card-white">
+            <span class="close-btn" onclick="flipCard()"><img src="/img/close.png" alt=""></span>
+
+            <div class="data-back">
+                <ul>
+                    <li>Comisiones por regalías: 5 %</li>
+                    <li>Ingresos por tarifas: 9 %</li>
+                    <li>Descuento en la tarifa comercial: 60 %</li>
+                    <li>Pre-Venta: 1ra Ronda</li>
+                </ul>
+            </div>
+
+            <div class="card-img-back  back-img1">
+                <img src="/img/phones.png" alt="">
+            </div>
+        </div>
+    </div>
+
+    <div class="card-nft " id="this2">
+        <div class="front card-white">
+
+            <button class="info-btn " onclick="flipCard2()"><img src="/img/info-black.png" alt=""></button>
+            <img class="tarjeta-nft" src="/img/nfts/SIlver.gif" loop>
+            <div class="input-group flex">
+                <div class="flex">
+                    <span class="restar" id="restar_cantidad2">-</span>
+                    <input class="cantidad" type="number" id="cantidad2" min="0" value="0">
+                    <span class="sumar" id="sumar_cantidad2">+</span>
+                </div>
+                <input type="text" id="precioTotal2" class="precioTotal" readonly >
+            </div>
+
+        </div>
+
+        <div class="back card-white">
+            <span class="close-btn" onclick="flipCard2()"><img src="/img/close.png" alt=""></span>
+
+            <div class="data-back">
+                <ul>
+                    <li>Comisiones por regalías: 3 %</li>
+                    <li>Ingresos por tarifas: 4 %</li>
+                    <li>Descuento de la tarifa comercial: 50 %</li>
+                    <li>Preventa: segunda ronda</li>
+                </ul>
+            </div>
+
+            <div class="card-img-back  back-img2">
+                <img src="/img/cardBack2.png" alt="">
+            </div>
+        </div>
+    </div>
+
+    <div class="mg-right mg-top card-nft " id="this3">
+        <div class="front card-white">
+
+            <button class="info-btn " onclick="flipCard3()"><img src="/img/info-black.png" alt=""></button>
+            <img class="tarjeta-nft" src="/img/nfts/Bronze.gif" loop>
+            <div class="input-group flex">
+                <div class="flex">
+                    <span class="restar" id="restar_cantidad3">-</span>
+                    <input class="cantidad" type="number" id="cantidad3" min="0" value="0">
+                    <span class="sumar" id="sumar_cantidad3">+</span>
+                </div>
+                <input type="text" id="precioTotal3" class="precioTotal" readonly>
+            </div>
+
+        </div>
+
+        <div class="back card-white">
+            <span class="close-btn" onclick="flipCard3()"><img src="/img/close.png" alt=""></span>
+
+            <div class="data-back">
+                <ul>
+                    <li>Comisiones por regalías: 2 %</li>
+                    <li>Ingresos por tarifas: 2 %</li>
+                    <li>Descuento de la tarifa comercial: 40 %</li>
+                    <li>Preventa: 3.ª ronda</li>
+                </ul>
+            </div>
+
+            <div class="card-img-back  back-img3">
+                <img src="/img/cardBack3.png" alt="">
+            </div>
+        </div>
+    </div>
+
+    <div class="mg-top card-nft ">
+        <div class="front card-orange last-of-info">
+
+            <h3 class="title-card">Suministro Total De Todas Las Rondas:</h3>
+                <p class="text-card">
+                    NFT de ORO = 2.500
+                    <br>
+                    NFT de PLATA = 3.800
+                    <br>
+                    NFT de BRONCE = 6.500
+                </p>
+
+            <p class="text-card">
+                El 1 de cada mes, los precios de nuestra colección de NFT aumentarán automáticamente un 30% más de su valor.
+            </p>
+        </div>
+    </div>
+
+    <div id="button_container">
+        <div id="snackbar" class="error">{{message_success}}</div>
+
+        <div v-if="loading" class="container_load">
+            <div class="ld ld-ball ld-flip-h" style="font-size:45px;color:black"></div>
+        </div>
+
+        <button v-if="!etherumInstall" class="hover-disabled btn-purchase">
+            <a href="https://metamask.io/" target="_blank" rel="noopener noreferrer">
+                <div class="button-text">Install Metamask</div>
+                <span class="hover-effect"></span>
+            </a>
+        </button>
+
+        <button class="hover-button btn-purchase"
+                v-if="!loading && !is_connect && statusPermit && etherumInstall"
+                v-on:click='connect'>
+            <div class="button-text">Connect Wallet</div>
+            <span class="hover-effect"></span>
+        </button>
+
+        <div v-if="!loading && is_connect && statusPermit" style="display: flex; justify-content: center;">
+            <div style="width: 280px;">
+                <div style="display: flex; flex-direction: row; gap:20px;">
+                    <button class="btn-purchase"
+                            v-on:click="()=>onChangeCoin(0)"
+                            v-bind:class="{'hover-button tab-hover':coinSelect==0, 'btn-tab-disabled':coinSelect==1, }">
+                        <div class="button-text">
+                            BUSD
+                        </div>
+                        <span class="hover-effect"></span>
+                    </button>
+
+                    <button class="btn-purchase"
+                            v-on:click="()=>onChangeCoin(1)"
+                            v-bind:class="{'hover-button tab-hover':coinSelect==1, 'btn-tab-disabled':coinSelect==0, }">
+                        <div class="button-text">
+                            USDT
+                        </div>
+                        <span class="hover-effect"></span>
+                    </button>
+                </div>
+                <div>
+                    <button style="width:100%;margin-top: 20px;" class="hover-button btn-purchase"
+                            v-if="!loading && is_connect && statusPermit"
+                            v-on:click='purchase'>
+                        <div class="button-text">
+                            <span v-if="!allowance">Approve</span>
+                            <span v-if="allowance">Buy now</span>
+                        </div>
+                        <span class="hover-effect"></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+
+        <button class="hover-button btn-purchase" v-if="!loading && is_connect && !statusPermit"
+                v-on:click='changeNetwork'>
+            <div class="button-text">Change network</div>
+            <span class="hover-effect"></span>
+        </button>
+
+    </div>
+
+</div>
+
+
