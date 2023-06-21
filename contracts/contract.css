@@ -14,6 +14,13 @@
     bottom: 30px; /* 30px from the bottom */
 }
 
+.input-group input[type="number"]::-webkit-inner-spin-button,
+.input-group input[type="number"]::-webkit-outer-spin-button
+{
+    -webkit-appearance: none !important;
+    margin: 0;
+}
+
 .btn-purchase a
 {
     color: white;
